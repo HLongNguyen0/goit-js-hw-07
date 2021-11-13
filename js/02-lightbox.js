@@ -22,8 +22,5 @@ gallery.addEventListener('click', showModal);
 function showModal(event) {
   event.preventDefault();
   gallery.removeEventListener('click', showModal);
-  if (event.target.nodeName != 'IMG') {
-    return;
-  }
   const modal = new SimpleLightbox('.gallery a');
 }
