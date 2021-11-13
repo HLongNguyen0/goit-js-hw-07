@@ -17,10 +17,4 @@ const imgStringHtml = galleryItems
 
 gallery.innerHTML = imgStringHtml;
 
-gallery.addEventListener('click', showModal);
-
-function showModal(event) {
-  event.preventDefault();
-  gallery.removeEventListener('click', showModal);
-  const modal = new SimpleLightbox('.gallery a');
-}
+const modal = new SimpleLightbox('.gallery a');
