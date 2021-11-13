@@ -26,4 +26,5 @@ gallery.insertAdjacentHTML('beforeend', imgStringHtml(galleryItems));
 new SimpleLightbox('.gallery__link', {
   captionData: 'alt',
   captionDelay: 250,
+  captionPosition: 'bottom',
 });
