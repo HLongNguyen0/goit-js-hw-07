@@ -23,8 +23,8 @@ function imgStringHtml(galleryItems) {
 }
 gallery.insertAdjacentHTML('beforeend', imgStringHtml(galleryItems));
 
-new SimpleLightbox('.gallery__link', {
-  captionData: 'alt',
+new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
   captionDelay: 250,
   captionPosition: 'bottom',
 });
