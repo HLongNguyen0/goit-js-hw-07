@@ -14,7 +14,7 @@ const imgStringHtml = galleryItems
             class="gallery__image"
             src="${galleryItems[index].preview}"
             data-source="large-image.jpg"
-            alt="Image description"
+            alt="${galleryItems[index].description}"
             />
         </a>
     </div>
@@ -31,8 +31,9 @@ function showModal(event) {
   if (event.target.nodeName !== 'IMG') {
     return;
   }
+  const img = galleryItems.find(img => img.description === event.target.alt);
   const instance = basicLightbox.create(`
-    <img src="${event.target.src}" width="800" height="600">
+    <img src="${img.original}" width="800" height="600">
 `);
   instance.show();
 }
